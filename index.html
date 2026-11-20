@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>とんかつ 大喜｜長堀橋駅のとんかつ専門店・ミシュラン掲載の特選ロース</title>
+<meta name="description" content="大阪市中央区東心斎橋のとんかつ専門店「とんかつ 大喜（だいき）」。鹿児島県産豚を注文後にスジ切り・パン粉付けし、低温でじっくり揚げる。ミシュランガイド掲載、塩は約20種。長堀橋駅から徒歩約3分。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2b2620;
+  --ink-soft:#57503f;
+  --cream:#faf6ee;
+  --paper:#f3ecdd;
+  --card:#fffdf8;
+  --shu:#a9341f;
+  --shu-dark:#8c2a18;
+  --gold:#b98c2f;
+  --line:#e3d9c6;
+  --shadow:0 10px 30px rgba(43,38,32,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.85;
+  padding-top:34px;
+  padding-bottom:76px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+h1,h2,h3,.mincho{font-family:"Shippori Mincho",serif}
+a{color:inherit}
+
+/* ===== SAMPLE帯・透かし ===== */
+.sample-band{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:var(--shu-dark);color:#fff;
+  font-size:12px;letter-spacing:.08em;text-align:center;
+  padding:6px 10px;font-weight:700;
+}
+.watermark{
+  position:fixed;inset:0;z-index:150;pointer-events:none;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.watermark span{
+  font-family:"Shippori Mincho",serif;font-weight:800;
+  font-size:34vw;color:rgba(169,52,31,.055);
+  transform:rotate(-24deg);letter-spacing:.1em;white-space:nowrap;
+}
+
+/* ===== ヘッダー ===== */
+header{
+  position:sticky;top:34px;z-index:100;
+  background:rgba(250,246,238,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-in{
+  max-width:1080px;margin:0 auto;padding:10px 16px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.logo .name{font-family:"Shippori Mincho",serif;font-weight:800;font-size:24px;letter-spacing:.12em}
+.logo .sub{font-size:11px;color:var(--ink-soft);letter-spacing:.22em}
+.header-tel{
+  display:flex;align-items:center;gap:8px;text-decoration:none;
+  background:var(--ink);color:#fff;border-radius:999px;
+  padding:8px 16px;font-weight:700;font-size:14px;white-space:nowrap;
+}
+.header-tel svg{width:16px;height:16px;fill:#fff}
+
+/* ===== ヒーロー ===== */
+.hero{position:relative;background:#171310;color:#fff;overflow:hidden}
+.hero img.hero-img{width:100%;height:min(78vh,560px);object-fit:cover;opacity:.92}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(15,12,9,.34) 0%,rgba(15,12,9,.08) 40%,rgba(15,12,9,.78) 100%);
+}
+.hero-in{
+  position:absolute;inset:0;z-index:2;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  max-width:1080px;margin:0 auto;padding:28px 20px 30px;width:100%;
+}
+.hero .area{font-size:13px;letter-spacing:.3em;color:#f0dfba;font-weight:700}
+.hero h1{
+  font-size:clamp(27px,6.2vw,46px);font-weight:800;line-height:1.45;
+  letter-spacing:.04em;margin:10px 0 12px;text-shadow:0 2px 14px rgba(0,0,0,.45);
+}
+.hero p.lead{font-size:clamp(14px,3.4vw,17px);color:#f5efe2;max-width:640px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero-badges span{
+  background:rgba(23,19,16,.72);border:1px solid rgba(240,223,186,.55);
+  color:#f7ecd2;font-size:12.5px;font-weight:700;letter-spacing:.06em;
+  padding:6px 12px;border-radius:999px;
+}
+.hero-badges span b{color:#ffd98a;font-weight:800}
+.img-note{position:absolute;right:12px;bottom:10px;z-index:3;font-size:10.5px;color:rgba(255,255,255,.75);letter-spacing:.05em}
+
+/* ===== 営業ステータス ===== */
+.status-bar{background:var(--ink);color:#fff}
+.status-in{
+  max-width:1080px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.status-dot{width:11px;height:11px;border-radius:50%;background:#9e9e9e;flex:none;box-shadow:0 0 0 4px rgba(255,255,255,.12)}
+.status-dot.open{background:#7ed957;box-shadow:0 0 0 4px rgba(126,217,87,.22)}
+.status-dot.closed{background:#e2574c;box-shadow:0 0 0 4px rgba(226,87,76,.2)}
+#statusText{font-weight:700;font-size:15.5px;letter-spacing:.03em}
+.status-note{font-size:12px;color:#cfc7b4}
+
+/* ===== レイアウト ===== */
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:56px 0 8px}
+.sec-head{margin-bottom:26px}
+.sec-head .en{font-size:11.5px;letter-spacing:.34em;color:var(--shu);font-weight:700}
+.sec-head h2{font-size:clamp(23px,5vw,32px);font-weight:800;letter-spacing:.05em;margin-top:4px}
+.sec-head p{color:var(--ink-soft);font-size:14.5px;margin-top:8px;max-width:680px}
+
+/* 数字カード */
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+.num-card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:18px 10px 14px;text-align:center;box-shadow:var(--shadow);
+}
+.num-card .num{font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(22px,5.4vw,34px);color:var(--shu);line-height:1.2}
+.num-card .num small{font-size:.55em;color:var(--ink)}
+.num-card .lbl{font-size:12px;color:var(--ink-soft);margin-top:6px;letter-spacing:.05em}
+
+/* こだわり */
+.reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.reason{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:24px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.reason::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--shu),var(--gold));
+}
+.reason .no{font-family:"Shippori Mincho",serif;font-size:13px;color:var(--gold);font-weight:800;letter-spacing:.2em}
+.reason h3{font-size:18.5px;font-weight:800;margin:8px 0 10px;line-height:1.55}
+.reason p{font-size:14px;color:var(--ink-soft)}
+
+/* 看板メニュー */
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.menu-card{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.menu-card img{width:100%;height:190px;object-fit:cover}
+.menu-card .body{padding:18px 18px 20px}
+.menu-card .tag{
+  display:inline-block;background:var(--shu);color:#fff;font-size:11px;font-weight:700;
+  letter-spacing:.1em;padding:3px 10px;border-radius:999px;margin-bottom:8px;
+}
+.menu-card .tag.gold{background:var(--gold)}
+.menu-card h3{font-size:19px;font-weight:800;line-height:1.5}
+.menu-card p{font-size:13.5px;color:var(--ink-soft);margin-top:8px}
+.menu-card .imgcap{font-size:10.5px;color:#a3977f;padding:6px 18px 0}
+.price-note{
+  margin-top:16px;background:var(--paper);border:1px dashed var(--gold);
+  border-radius:12px;padding:12px 16px;font-size:13px;color:var(--ink-soft);
+}
+
+/* 全メニュー */
+.allmenu{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:8px 22px;box-shadow:var(--shadow);
+}
+.allmenu li{
+  list-style:none;display:flex;justify-content:space-between;gap:14px;
+  padding:13px 2px;border-bottom:1px solid var(--line);font-size:15px;
+}
+.allmenu li:last-child{border-bottom:none}
+.allmenu .desc{font-size:12.5px;color:var(--ink-soft);text-align:right}
+.lunch-box{
+  margin-top:16px;background:linear-gradient(120deg,#fdf3e0,#fbeed3);
+  border:1px solid #ecd9ae;border-radius:16px;padding:20px 22px;
+  display:flex;gap:16px;align-items:flex-start;
+}
+.lunch-box .mark{
+  flex:none;background:var(--shu);color:#fff;font-family:"Shippori Mincho",serif;
+  font-weight:800;font-size:14px;padding:8px 12px;border-radius:10px;letter-spacing:.08em;
+}
+.lunch-box h3{font-size:17px;font-weight:800}
+.lunch-box p{font-size:13.5px;color:var(--ink-soft);margin-top:4px}
+
+/* 初めての方へ */
+.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.guide{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:20px;box-shadow:var(--shadow);
+}
+.guide h3{font-size:16.5px;font-weight:800;display:flex;align-items:center;gap:10px}
+.guide h3 .ic{
+  flex:none;width:30px;height:30px;border-radius:50%;
+  background:var(--paper);border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Shippori Mincho",serif;color:var(--shu);font-weight:800;font-size:14px;
+}
+.guide p{font-size:14px;color:var(--ink-soft);margin-top:8px}
+
+/* お知らせ */
+.news{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 22px;box-shadow:var(--shadow)}
+.news li{list-style:none;padding:15px 2px;border-bottom:1px solid var(--line)}
+.news li:last-child{border-bottom:none}
+.news .date{font-size:12px;color:var(--shu);font-weight:700;letter-spacing:.1em}
+.news .txt{font-size:14.5px;margin-top:2px}
+
+/* Instagram導線 */
+.ig-banner{
+  margin-top:26px;border-radius:18px;overflow:hidden;position:relative;
+  background:linear-gradient(115deg,#3a2b20 0%,#6d3b26 55%,#a9341f 100%);
+  color:#fff;padding:30px 26px;box-shadow:var(--shadow);
+}
+.ig-banner h3{font-size:clamp(19px,4.6vw,25px);font-weight:800;line-height:1.5}
+.ig-banner p{font-size:14px;color:#f3e3d3;margin-top:8px;max-width:560px}
+.ig-btn{
+  display:inline-flex;align-items:center;gap:10px;margin-top:18px;
+  background:#fff;color:var(--shu-dark);text-decoration:none;font-weight:700;
+  padding:12px 22px;border-radius:999px;font-size:15px;
+}
+.ig-btn svg{width:19px;height:19px;fill:var(--shu)}
+
+/* 店舗情報 */
+.info-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:start}
+.info-table{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px 22px;box-shadow:var(--shadow)}
+.info-table dl{display:flex;gap:14px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:14.5px}
+.info-table dl:last-child{border-bottom:none}
+.info-table dt{flex:none;width:86px;font-weight:700;color:var(--shu-dark)}
+.info-table dd{color:var(--ink)}
+.info-table dd a{color:var(--shu);font-weight:700;text-decoration:none}
+.info-side img{border-radius:16px;box-shadow:var(--shadow);width:100%;height:230px;object-fit:cover}
+.info-side .cap{font-size:11px;color:#a3977f;margin-top:6px}
+.map-box{margin-top:14px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.map-box iframe{width:100%;height:250px;border:0;display:block}
+
+/* フッター */
+footer{margin-top:64px;background:var(--ink);color:#e9e2d2}
+.footer-in{max-width:1080px;margin:0 auto;padding:38px 20px 30px}
+.footer-in .fname{font-family:"Shippori Mincho",serif;font-size:22px;font-weight:800;letter-spacing:.12em}
+.footer-in p{font-size:13px;color:#c9c0aa;margin-top:8px}
+.footer-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.footer-links a{
+  border:1px solid #57503f;color:#e9e2d2;text-decoration:none;
+  font-size:13px;padding:8px 16px;border-radius:999px;font-weight:700;
+}
+.sources{margin-top:24px;border-top:1px solid #453e31;padding-top:16px;font-size:11px;color:#9a917c;line-height:1.9}
+.sample-note{margin-top:10px;font-size:11.5px;color:#ffd98a;font-weight:700}
+
+/* 固定アクションバー */
+.action-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:190;
+  background:rgba(255,253,248,.97);border-top:1px solid var(--line);
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  padding:8px 10px calc(8px + env(safe-area-inset-bottom));
+  gap:8px;box-shadow:0 -6px 20px rgba(43,38,32,.08);
+}
+.action-bar a{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  text-decoration:none;border-radius:12px;padding:9px 4px;
+  font-weight:700;font-size:14px;line-height:1.3;
+}
+.action-bar a small{font-size:10.5px;font-weight:500;opacity:.85}
+.action-bar .call{background:var(--shu);color:#fff}
+.action-bar .route{background:var(--ink);color:#fff}
+.action-bar .ig{background:var(--paper);color:var(--ink);border:1px solid var(--gold)}
+
+/* スクロール演出 */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media (max-width:760px){
+  .num-grid{grid-template-columns:repeat(2,1fr)}
+  .reason-grid,.menu-grid{grid-template-columns:1fr}
+  .guide-grid,.info-grid{grid-template-columns:1fr}
+  .logo .sub{display:none}
+  section{padding:44px 0 4px}
+}
+</style>
+</head>
+<body>
+
+<div class="sample-band">これはサンプルです。無断使用は禁止しています</div>
+<div class="watermark" aria-hidden="true"><span>SAMPLE</span></div>
+
+<header>
+  <div class="header-in">
+    <a class="logo" href="#">
+      <span class="name">とんかつ 大喜</span>
+      <span class="sub">TONKATSU DAIKI</span>
+    </a>
+    <a class="header-tel" href="tel:0671817895">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+      06-7181-7895
+    </a>
+  </div>
+</header>
+
+<!-- ヒーロー -->
+<div class="hero">
+  <img class="hero-img" src="hero.webp" alt="厚切りのロースカツ定食（イメージ）" fetchpriority="high">
+  <div class="hero-in">
+    <div class="area">大阪・東心斎橋 ／ 長堀橋駅 徒歩約3分</div>
+    <h1>注文を受けてから、<br>スジを切り、パン粉を付ける。</h1>
+    <p class="lead">鹿児島県産の豚を、低温でじっくり揚げる。<br>東心斎橋のとんかつ専門店「大喜」の一枚は、ここから始まります。</p>
+    <div class="hero-badges">
+      <span>ミシュランガイド掲載</span>
+      <span>Google <b>★4.5</b>・口コミ <b>1,380件</b></span>
+      <span>塩は約 <b>20種</b> をローテーション</span>
+    </div>
+  </div>
+  <div class="img-note">※料理写真はイメージです</div>
+</div>
+
+<!-- 営業ステータス -->
+<div class="status-bar">
+  <div class="status-in">
+    <span class="status-dot" id="statusDot"></span>
+    <span id="statusText">本日の営業状況を確認しています</span>
+    <span class="status-note">昼 11:00〜14:15 ／ 夜 17:30〜21:15（定休日：水・日 ほか不定休あり）</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- 数字カード -->
+  <div class="num-grid reveal">
+    <div class="num-card"><div class="num">★4.5</div><div class="lbl">Google評価</div></div>
+    <div class="num-card"><div class="num">1,380<small>件</small></div><div class="lbl">Google口コミ</div></div>
+    <div class="num-card"><div class="num">約20<small>種</small></div><div class="lbl">ローテーションする塩</div></div>
+    <div class="num-card"><div class="num">3<small>杯まで</small></div><div class="lbl">ご飯おかわり無料</div></div>
+  </div>
+
+  <!-- 選ばれる理由 -->
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="en">CRAFT</div>
+      <h2>大喜のこだわり</h2>
+      <p>作り置きはしません。豚・油・塩・米、ひとつひとつに理由のあるとんかつです。</p>
+    </div>
+    <div class="reason-grid">
+      <div class="reason">
+        <div class="no">其の一</div>
+        <h3>注文後に仕上げる、<br>低温揚げの一枚</h3>
+        <p>注文を受けてからスジ切り・パン粉付けを行い、低温でじっくり揚げます。断面はほんのりピンクでジューシー。揚げ上がりまで20〜30分ほどかかる、本気の一枚です。</p>
+      </div>
+      <div class="reason">
+        <div class="no">其の二</div>
+        <h3>鹿児島県産豚と、<br>約20種の塩</h3>
+        <p>厳選された鹿児島県産の豚を使用。合わせる塩は約20種が定期的に入れ替わります。まずは塩で、肉そのものの甘みを味わうのがおすすめです。</p>
+      </div>
+      <div class="reason">
+        <div class="no">其の三</div>
+        <h3>ブレンド米は、<br>3杯までおかわり無料</h3>
+        <p>ご飯はキヌヒカリとコシヒカリをブレンドした、とんかつに合うこだわりの一杯。3杯までおかわり無料、キャベツもおかわり自由です（口コミ情報）。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 看板メニュー -->
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="en">SIGNATURE</div>
+      <h2>看板メニュー</h2>
+      <p>部位とグラムが選べる定食が中心です。定食にはご飯・味噌汁・キャベツ・漬物が付きます。</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="rosu.webp" alt="ロースカツ定食（イメージ）" loading="lazy">
+        <div class="body">
+          <span class="tag">名物・数量限定</span>
+          <h3>特選ロースカツ定食</h3>
+          <p>脂の甘みが際立つ厚切りのロース。超厚切り300gの迫力も評判です。数量限定のため、早い時間帯の来店がおすすめです。</p>
+        </div>
+        <div class="imgcap">※写真はイメージです</div>
+      </div>
+      <div class="menu-card">
+        <img src="hire.webp" alt="ヒレカツ定食（イメージ）" loading="lazy">
+        <div class="body">
+          <span class="tag gold">さっぱり派に</span>
+          <h3>ヒレカツ定食</h3>
+          <p>きめ細かく、驚くほど柔らかなヒレ。脂控えめながら肉の旨みはしっかり。塩で食べると甘みが引き立ちます。</p>
+        </div>
+        <div class="imgcap">※写真はイメージです</div>
+      </div>
+      <div class="menu-card">
+        <img src="ebi.webp" alt="エビかつ・ミックスフライ（イメージ）" loading="lazy">
+        <div class="body">
+          <span class="tag gold">盛り合わせも</span>
+          <h3>エビかつ・ミックスフライ</h3>
+          <p>海老のフライや、とんかつとの盛り合わせも。おろしポン酢、梅しそ大根、味噌カツソースなど、味の変化も楽しめます。</p>
+        </div>
+        <div class="imgcap">※写真はイメージです</div>
+      </div>
+    </div>
+    <div class="price-note">価格は仕入れ等により変わるため、本サンプルでは掲載していません。最新の価格は店頭メニューでご確認ください（ご予算の目安：昼・夜とも2,000円台／食べログ掲載の予算情報）。</div>
+  </section>
+
+  <!-- 全メニュー -->
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="en">MENU</div>
+      <h2>メニュー</h2>
+      <p>ロースは脂身の多め・少なめ、グラム数も選べます。品目は季節や仕入れで変わる場合があります。</p>
+    </div>
+    <ul class="allmenu">
+      <li><span>リブロースカツ定食</span><span class="desc">メニュー一頁目の、脂好きのための部位</span></li>
+      <li><span>ロースカツ定食</span><span class="desc">脂身 多め／少なめ・グラム選択可</span></li>
+      <li><span>特選ロースカツ定食</span><span class="desc">厚切り・数量限定</span></li>
+      <li><span>ヒレカツ定食</span><span class="desc">柔らかく上品な赤身</span></li>
+      <li><span>エビカツ定食</span><span class="desc">海老のフライ</span></li>
+      <li><span>ミックスフライ定食</span><span class="desc">とんかつと海老などの盛り合わせ</span></li>
+      <li><span>とんかつカレー</span><span class="desc">口コミでも評判のカレー</span></li>
+      <li><span>カキフライ</span><span class="desc">広島県産・冬季のご提供</span></li>
+    </ul>
+    <div class="lunch-box">
+      <div class="mark">平日<br>限定</div>
+      <div>
+        <h3>平日限定 サービスランチ</h3>
+        <p>平日のランチタイムには、お得なサービスランチがあります。内容と価格は当日の店頭メニューでご確認ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 初めての方へ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="en">GUIDE</div>
+      <h2>初めての方へ</h2>
+      <p>小さな専門店ならではの決まりごとをまとめました。</p>
+    </div>
+    <div class="guide-grid">
+      <div class="guide">
+        <h3><span class="ic">1</span>ご予約はお受けしていません</h3>
+        <p>来店順のご案内です。満席のときは入れ替え制のため、時間帯によりお待ちいただく場合があります。開店直後（11:00／17:30）の来店がおすすめです。</p>
+      </div>
+      <div class="guide">
+        <h3><span class="ic">2</span>揚げ上がりまで20〜30分</h3>
+        <p>注文を受けてから揚げるため、厚みによっては30分ほどかかります。お時間に余裕を持ってお越しください。</p>
+      </div>
+      <div class="guide">
+        <h3><span class="ic">3</span>お支払いは現金のみ</h3>
+        <p>カード・電子マネーは使えません。現金のご用意をお願いします。</p>
+      </div>
+      <div class="guide">
+        <h3><span class="ic">4</span>まずは何もつけずに、次に塩で</h3>
+        <p>口コミで勧められる食べ方です。そのまま→岩塩→ソース→辛子の順で、味の違いを楽しめます。キャベツには胡麻と紫蘇、2種のドレッシングを。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- お知らせ -->
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="en">NEWS</div>
+      <h2>お知らせ</h2>
+    </div>
+    <ul class="news">
+      <li>
+        <div class="date">2026.11.20 更新</div>
+        <div class="txt">不定休・臨時休業のお知らせは、Instagram（@tonkatsu.daiki）で告知しています。ご来店前にご確認ください。</div>
+      </li>
+      <li>
+        <div class="date">冬季のご案内</div>
+        <div class="txt">冬季は広島県産のカキフライをご提供しています。開始時期はInstagramでお知らせします。</div>
+      </li>
+      <li>
+        <div class="date">ランチのご案内</div>
+        <div class="txt">平日限定のサービスランチをご用意しています。内容は当日の店頭メニューをご覧ください。</div>
+      </li>
+    </ul>
+
+    <!-- Instagram導線 -->
+    <div class="ig-banner">
+      <h3>不定休のお知らせは、<br>Instagramで。</h3>
+      <p>臨時休業や季節メニューの情報はInstagramで発信しています。フォローして、来店前のチェックにご活用ください。</p>
+      <a class="ig-btn" href="https://www.instagram.com/tonkatsu.daiki" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.9A6.1 6.1 0 1 0 18.1 12 6.1 6.1 0 0 0 12 5.9zm0 10.1A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-11.8a1.4 1.4 0 1 1-1.4 1.4 1.4 1.4 0 0 1 1.4-1.4z"/></svg>
+        @tonkatsu.daiki をフォロー
+      </a>
+    </div>
+  </section>
+
+  <!-- 店舗情報 -->
+  <section class="reveal">
+    <div class="sec-head">
+      <div class="en">INFORMATION</div>
+      <h2>店舗情報</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-table">
+        <dl><dt>店名</dt><dd>とんかつ 大喜（だいき）</dd></dl>
+        <dl><dt>住所</dt><dd>〒542-0083<br>大阪市中央区東心斎橋1-6-2</dd></dl>
+        <dl><dt>アクセス</dt><dd>大阪メトロ 長堀橋駅（堺筋線・長堀鶴見緑地線）7番出口から徒歩約3分</dd></dl>
+        <dl><dt>電話</dt><dd><a href="tel:0671817895">06-7181-7895</a>（ご予約はお受けしていません）</dd></dl>
+        <dl><dt>営業時間</dt><dd>昼の部 11:00〜14:15<br>夜の部 17:30〜21:15<br>※材料がなくなり次第、早めに閉店する場合があります</dd></dl>
+        <dl><dt>定休日</dt><dd>水曜日・日曜日・不定休（Instagramで告知）</dd></dl>
+        <dl><dt>席数</dt><dd>約10〜15席（カウンター中心の小さな店内）</dd></dl>
+        <dl><dt>駐車場</dt><dd>専用駐車場なし（近隣に有料駐車場があります）</dd></dl>
+        <dl><dt>お支払い</dt><dd>現金のみ</dd></dl>
+        <dl><dt>喫煙</dt><dd>全席禁煙</dd></dl>
+      </div>
+      <div class="info-side">
+        <img src="exterior.webp" alt="とんかつ 大喜の店舗外観" loading="lazy">
+        <div class="cap">店舗外観（実写真）。木の看板が目印です</div>
+        <div class="map-box">
+          <iframe title="とんかつ 大喜の地図" src="https://www.google.com/maps?q=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%E5%A4%A7%E5%96%9C%20%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%9D%B1%E5%BF%83%E6%96%8E%E6%A9%8B1-6-2&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-in">
+    <div class="fname">とんかつ 大喜</div>
+    <p>〒542-0083 大阪市中央区東心斎橋1-6-2 ／ 06-7181-7895<br>
+    営業時間：昼 11:00〜14:15・夜 17:30〜21:15 ／ 定休日：水・日・不定休</p>
+    <div class="footer-links">
+      <a href="tel:0671817895">電話する</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%E5%A4%A7%E5%96%9C%20%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%9D%B1%E5%BF%83%E6%96%8E%E6%A9%8B1-6-2" target="_blank" rel="noopener">経路案内</a>
+      <a href="https://www.instagram.com/tonkatsu.daiki" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4-%E5%A4%A7%E5%96%9C-889656537805891/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <div class="sources">
+      写真について：店舗外観は実写真（出典：Inside Osaka）。料理写真はすべてイメージです（AI生成）。本番公開時は店舗様ご提供の写真に差し替えます。<br>
+      掲載情報の出典：Google（評価★4.5・口コミ1,380件）、食べログ（予算の目安）、Inside Osaka、hamoni、Retty、Wanderlog ほか公開情報。営業時間・定休日は最新の公開情報に基づきますが、不定休のため来店前にInstagramでご確認ください。
+    </div>
+    <div class="sample-note">※このページは「食べちゃん」が作成したサンプルです。無断使用は禁止しています。</div>
+  </div>
+</footer>
+
+<!-- 固定アクションバー -->
+<nav class="action-bar">
+  <a class="call" href="tel:0671817895">電話する<small>06-7181-7895</small></a>
+  <a class="route" href="https://www.google.com/maps/dir/?api=1&destination=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%E5%A4%A7%E5%96%9C%20%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%9D%B1%E5%BF%83%E6%96%8E%E6%A9%8B1-6-2" target="_blank" rel="noopener">経路案内<small>長堀橋駅 徒歩約3分</small></a>
+  <a class="ig" href="https://www.instagram.com/tonkatsu.daiki" target="_blank" rel="noopener">Instagram<small>@tonkatsu.daiki</small></a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "とんかつ 大喜",
+  "alternateName": "Tonkatsu Daiki",
+  "servesCuisine": "とんかつ",
+  "priceRange": "￥2,000～￥2,999",
+  "telephone": "06-7181-7895",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "542-0083",
+    "addressRegion": "大阪府",
+    "addressLocality": "大阪市中央区",
+    "streetAddress": "東心斎橋1-6-2",
+    "addressCountry": "JP"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "1380" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "14:15" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday"], "opens": "17:30", "closes": "21:15" }
+  ],
+  "sameAs": ["https://www.instagram.com/tonkatsu.daiki"]
+}
+</script>
+
+<script>
+// ===== ライブ営業ステータス（昼・夜二部制／水・日定休） =====
+(function(){
+  var dot = document.getElementById('statusDot');
+  var txt = document.getElementById('statusText');
+  function pad(n){ return (n<10?'0':'')+n; }
+  function fmt(m){ return Math.floor(m/60) + ':' + pad(m%60); }
+  function update(){
+    var now = new Date();
+    var day = now.getDay(); // 0=日 3=水
+    var cur = now.getHours()*60 + now.getMinutes();
+    var LUNCH_S = 11*60, LUNCH_E = 14*60+15;
+    var DIN_S = 17*60+30, DIN_E = 21*60+15;
+    var msg, cls;
+    if(day === 0 || day === 3){
+      msg = '本日は定休日です（水・日 定休）';
+      cls = 'closed';
+    } else if(cur >= LUNCH_S && cur < LUNCH_E){
+      msg = '営業中です（昼の部 〜' + fmt(LUNCH_E) + '）';
+      cls = 'open';
+    } else if(cur >= DIN_S && cur < DIN_E){
+      msg = '営業中です（夜の部 〜' + fmt(DIN_E) + '）';
+      cls = 'open';
+    } else if(cur < LUNCH_S){
+      msg = '本日は ' + fmt(LUNCH_S) + ' 開店です';
+      cls = 'closed';
+    } else if(cur >= LUNCH_E && cur < DIN_S){
+      msg = '昼の部は終了しました（夜の部は ' + fmt(DIN_S) + ' から）';
+      cls = 'closed';
+    } else {
+      msg = '本日の営業は終了しました';
+      cls = 'closed';
+    }
+    txt.textContent = msg + ' ※不定休あり';
+    dot.className = 'status-dot ' + cls;
+  }
+  update();
+  setInterval(update, 60000);
+})();
+
+// ===== スクロール演出 =====
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(e){ e.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+    });
+  }, {threshold: 0.08});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
